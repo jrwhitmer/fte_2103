@@ -13,6 +13,10 @@ RSpec.describe Item do
     it 'can return its name' do
       expect(item1.name).to eq('Peach Pie (Slice)')
     end
+
+    it 'can return its price' do
+      expect(item1.price).to eq("$3.75")
+    end
   end
 
 end
