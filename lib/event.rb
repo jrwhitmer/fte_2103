@@ -40,6 +40,17 @@ class Event
   #   total_inventory
   # end
 
+  def sorted_item_list
+    item_names = @food_trucks.flat_map do |food_truck|
+      food_truck.inventory.keys.map do |item|
+        item.name
+      end
+    end.uniq!
+
+    item_names.sort_by do |item_name|
+      item_name.downcase
+    end
+  end
 
 
 end

@@ -61,7 +61,7 @@ RSpec.describe Event do
       expect(event.food_trucks_that_sell(item4)).to eq([food_truck2])
     end
 
-    it 'can return a total inventory' do
+    xit 'can return a total inventory' do
       event.add_food_truck(food_truck1)
       event.add_food_truck(food_truck2)
       event.add_food_truck(food_truck3)
