@@ -9,6 +9,10 @@ RSpec.describe Item do
     it 'exists' do
       expect(item1).to be_instance_of(Item)
     end
+
+    it 'can return its name' do
+      expect(item1.name).to eq('Peach Pie (Slice)')
+    end
   end
 
 end
