@@ -11,7 +11,7 @@ class FoodTruck
     if @inventory[item].nil?
       0
     else
-      @inventory[item].count
+      @inventory[item]
     end
   end
 
