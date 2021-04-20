@@ -52,5 +52,8 @@ class Event
     end
   end
 
+  def overstocked_items
+    
+  end
 
 end
