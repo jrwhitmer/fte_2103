@@ -69,7 +69,7 @@ RSpec.describe Event do
       expect(event.total_inventory).to eq({
           item1 => {
             quantity: 100,
-            food_trucks: [food_truck1, foodtruck3]
+            food_trucks: [food_truck1, food_truck3]
           },
           item2 => {
             quantity: 7,
@@ -84,6 +84,14 @@ RSpec.describe Event do
             food_trucks: [food_truck2]
           }
         })
+    end
+
+    it 'can return sorted items' do
+      event.add_food_truck(food_truck1)
+      event.add_food_truck(food_truck2)
+      event.add_food_truck(food_truck3)
+
+      expect(event.sorted_item_list).to eq(['Apple Pie (Slice)', "Banana Nice Cream", 'Peach Pie (Slice)', "Peach-Raspberry Nice Cream"])
     end
   end
 

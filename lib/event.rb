@@ -23,4 +23,23 @@ class Event
       food_truck.inventory.keys.include?(item)
     end.uniq!
   end
+
+  # def total_inventory
+  #   item_array = @food_trucks.map do |food_truck|
+  #       food_truck.inventory.keys
+  #     end.uniq!
+  #   food_truck_quantity_hash = {}
+  #   total_inventory = {}
+  #   @food_trucks.each do |food_truck|
+  #     item_array.each do |item|
+  #       food_truck_quantity_hash[:quantity] = food_truck.inventory[item]
+  #       food_truck_quantity_hash[:food_trucks] = food_truck
+  #       total_inventory[item] = food_truck_quantity_hash
+  #     end
+  #   end
+  #   total_inventory
+  # end
+
+
+
 end
